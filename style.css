@@ -1,0 +1,279 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+:root {
+  --bg-color: #fff;
+  --text-color-dark: #000;
+  --text-color-light: #fff;
+  --btn-background-color: #1a3e3e;
+  --btn-background-color-hover-REVERSE: #1a3e3e;
+  --btn-background-color-REVERSE: #ffffff;
+  --btn-background-color-hover: #ffffff;
+  --select-background-transparent: transparent;
+  --select-border-light: #fff;
+  --search-bar-background-color: #ffffff2e;
+  --section-3-background-color: #f3f5f4;
+}
+
+button {
+  border: none;
+  background-color: var(--btn-background-color);
+  color: var(--text-color-light);
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: all 150ms ease;
+}
+
+button:hover {
+  background-color: var(--btn-background-color-hover);
+  color: var(--text-color-dark);
+  outline: 2px solid #1a3e3e;
+  cursor: pointer;
+}
+
+/* Общие стили для select */
+select {
+  border: 2px solid var(--select-border-light);
+  color: var(--text-color-light);
+  font-size: 16px;
+  width: 270px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  background-color: var(--select-background-transparent);
+
+  /* Убираем стандартную стрелку */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  padding-right: 50px;
+}
+
+/* Для Локации и Участников - стрелка */
+#location__select,
+#participants__select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+/* Для Даты похода - иконка календаря */
+#date__select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+}
+
+/* Стили для option (темный фон) */
+select option {
+  background-color: #1a3e3e;
+  color: white;
+  padding: 10px;
+}
+
+/* Фокус состояние для select */
+select:focus {
+  outline: none;
+  border-color: #fff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+/* СЕКЦИЯ 1. (БЛОК С ПОДБОРОМ ТУРА) */
+
+.section1 {
+  background-image: url(images/background_sec_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 985px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  color: var(--text-color-light);
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav a {
+  color: var(--text-color-light);
+  opacity: 0.8;
+  transition: all 150ms ease-in-out;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.search__program {
+  margin-top: auto;
+  margin-bottom: 82px;
+  display: flex;
+  justify-content: center;
+}
+
+.search__program__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.search__program__description {
+  font-size: 30px;
+  width: 700px;
+  width: 1080px;
+  color: var(--text-color-light);
+}
+.location p,
+.date p,
+.participants p {
+  color: var(--text-color-light);
+  margin-top: 10px;
+}
+
+.bar__items {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 40px;
+}
+
+.search__program__bar {
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  background-color: var(--search-bar-background-color);
+}
+
+.search__programm__btn {
+  background-color: var(--btn-background-color-REVERSE);
+  color: var(--text-color-dark);
+  outline: 2px solid #1a3e3e;
+}
+
+.search__programm__btn:hover {
+  background-color: var(--btn-background-color-hover-REVERSE);
+  color: var(--text-color-light);
+}
+
+/* СЕКЦИЯ 2 (С ДВУМЯ ФОТО СЛЕВА И ТЕКСТОВЫМ БЛОКОМ СПРАВА) */
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 730px;
+}
+
+.sec2__inner {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+
+.photos-stack {
+  position: relative;
+  width: 400px; /* Подстрой под нужный размер */
+  height: 300px;
+}
+
+.photo {
+  position: absolute;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.photo-1 {
+  top: -25%;
+  left: 0;
+  z-index: 1;
+  height: 400px;
+  width: 350px;
+}
+
+.photo-2 {
+  top: 25%;
+  left: 20%;
+  z-index: 1;
+  height: 400px;
+  width: 350px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.sec2__text__block {
+  width: 580px;
+}
+
+.about__our__methods {
+  color: #f2be22;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.sec2__text__block h2 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.text__about {
+  color: var(--text-color-dark);
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+/*СЕКЦИЯ 3 (БЛОК С ТЕКСТОМ СЛЕВА И 4 ФОТО СПРАВА В ВИДЕ КЛЕВЕРА)*/
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 770px;
+  background-color: var(--section-3-background-color);
+}
+
+.sec3__inner {
+  display: flex;
+  justify-content: center;
+}
+
+.sec3__text__block {
+  width: 580px;
+}
+
+.ui__text__block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ui__text__block__inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
